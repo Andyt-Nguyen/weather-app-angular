@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WeatherApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/lib/angular.min.js" charset="utf-8"></script>
+	<script src="js/lib/angular-animate.min.js" charset="utf-8"></script>
+	<script src="js/lib/jquery.js" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<script src="js/weather.js" charset="utf-8"></script>
+	<script src="js/controllers/weatherController.js" charset="utf-8"></script>
+	<title>Weather App</title>
+</head>
+<body>
+	<div class="container">
+		<div ng-controller="WeatherController">
+
+			<header>
+				<h1>{{country}}</h1>
+				<h3>{{city}}, {{state}}</h3>
+				<h2><img ng-src="{{des}}" width="120" alt=""></h2>
+			</header>
+
+			<main>
+				<div>
+					<h2>{{normTemp}}<sup>o</sup> {{temp}}</h2>
+					<a class='dropdown-button btn' href='#' data-activates='temperatures'>Change</a>
+					<ul id='temperatures' class='dropdown-content'>
+						<li ng-click="changeToF()"><a href="#!">Fahrenheit</a></li>
+						<li class="divider"></li>
+						<li ng-click="changeToC()"><a href="#!">Celcius</a></li>
+						<li class="divider"></li>
+						<li ng-click="changeToK()"><a href="#!">Kelvin</a></li>
+					</ul>
+					<h5>{{skys}}</h5>
+					<h5>Wind Speeds: {{wind}} mph</h5>
+					<h5>Humidity: {{humidity}}%</h5>
+					<h5>Pressure: {{pressure}} Pa</h5>
+				</div>
+			</main>
+		</div>
+	</div>
+</body>
+</html>

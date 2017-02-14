@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Barrio");
+
+body{
+	animation: pulse 20s infinite;
+	color: #f5f5f5;
+	font-family: Barrio;
+}
+
+body ::after{
+  content: "";
+  background: url('../pictures/seigaiha/seigaiha.png');
+	background-size: cover;
+  opacity: 0.09;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+@keyframes pulse {
+	0% {background: #651fff}
+	25% {background: #0277bd}
+	50% {background: #00e676}
+	75% {background: #f9a825}
+	100% {background: #651fff}
+}
+
+header{
+	padding-top: 20px;
+	text-align: center;
+}
+
+main{
+	padding-top: 5px;
+	text-align: center;
+}
+
+.dropdown-button{
+	background: #ffd600;
+}
