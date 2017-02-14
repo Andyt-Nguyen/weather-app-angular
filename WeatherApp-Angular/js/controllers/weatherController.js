@@ -9,7 +9,7 @@ angular.module('WeatherApp')
 		var pos = response.data;
 		var lat = pos.lat;
 		var lon = pos.lon;
-		var key = 'a4fcb2af4c3e8404740fe72b07552771';
+		var key = '--API KEY---';
 		$scope.country = pos.country;
 		$scope.city = pos.city;
 		$scope.state = pos.regionName;
