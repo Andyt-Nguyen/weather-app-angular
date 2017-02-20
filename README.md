@@ -1,2 +1,2 @@
 # weather-app-angular
-Weather App in Angular
+Decided to do a weather app in Angular :D
